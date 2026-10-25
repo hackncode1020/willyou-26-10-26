@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<title>Will you be mine? 💖 · @hack.n.code</title>
+<meta name="description" content="A tiny proposal page they can't say NO to. Made by @hack.n.code">
+<meta property="og:title" content="Will you be mine? 💖">
+<meta property="og:description" content="Try to press NO 😏 Made by @hack.n.code">
+<meta name="theme-color" content="#1a0410">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@500;600;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+
+<button id="share" class="share" aria-label="Share">💌 Share</button>
+
+<main id="ask" class="screen">
+  <div class="bear" id="bear1">
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="52" cy="52" r="26" fill="#b5764a"/><circle cx="52" cy="52" r="14" fill="#f2b8a0"/>
+      <circle cx="148" cy="52" r="26" fill="#b5764a"/><circle cx="148" cy="52" r="14" fill="#f2b8a0"/>
+      <ellipse cx="100" cy="102" rx="66" ry="60" fill="#c98656"/>
+      <ellipse cx="100" cy="124" rx="30" ry="22" fill="#f4d3b5"/>
+      <circle cx="76" cy="94" r="7" fill="#2a1410"/><circle cx="124" cy="94" r="7" fill="#2a1410"/>
+      <circle cx="78.5" cy="91.5" r="2.4" fill="#fff"/><circle cx="126.5" cy="91.5" r="2.4" fill="#fff"/>
+      <ellipse cx="100" cy="116" rx="9" ry="6.5" fill="#3a1d16"/>
+      <path d="M90 128 Q100 138 110 128" stroke="#3a1d16" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <ellipse cx="64" cy="116" rx="10" ry="6" fill="#ff8fab" opacity=".7"/><ellipse cx="136" cy="116" rx="10" ry="6" fill="#ff8fab" opacity=".7"/>
+      <path d="M100 196 C60 168 58 140 80 138 C92 137 100 148 100 152 C100 148 108 137 120 138 C142 140 140 168 100 196Z" fill="#ff2e63" stroke="#fff" stroke-width="3"/>
+    </svg>
+  </div>
+  <h1 id="q">Will you be mine? 💖</h1>
+  <p class="sub" id="sub">Choose wisely 😌</p>
+  <div class="row" id="row">
+    <button id="yes" class="btn yes">YES 💖</button>
+    <button id="no" class="btn no">No</button>
+  </div>
+</main>
+
+<section id="yay" class="screen yay" aria-live="polite">
+  <div class="bear big" id="bear2">
+    <svg viewBox="0 0 200 200" aria-hidden="true">
+      <circle cx="52" cy="52" r="26" fill="#b5764a"/><circle cx="52" cy="52" r="14" fill="#f2b8a0"/>
+      <circle cx="148" cy="52" r="26" fill="#b5764a"/><circle cx="148" cy="52" r="14" fill="#f2b8a0"/>
+      <ellipse cx="100" cy="102" rx="66" ry="60" fill="#c98656"/>
+      <ellipse cx="100" cy="124" rx="30" ry="22" fill="#f4d3b5"/>
+      <path d="M68 96 Q76 86 84 96" stroke="#2a1410" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <path d="M116 96 Q124 86 132 96" stroke="#2a1410" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <ellipse cx="100" cy="114" rx="9" ry="6.5" fill="#3a1d16"/>
+      <path d="M86 125 Q100 144 114 125 Z" fill="#7a1f2b"/>
+      <ellipse cx="62" cy="114" rx="11" ry="7" fill="#ff6f96" opacity=".8"/><ellipse cx="138" cy="114" rx="11" ry="7" fill="#ff6f96" opacity=".8"/>
+      <path d="M100 196 C60 168 58 140 80 138 C92 137 100 148 100 152 C100 148 108 137 120 138 C142 140 140 168 100 196Z" fill="#ff2e63" stroke="#fff" stroke-width="3"/>
+    </svg>
+  </div>
+  <h2 class="yayt">Yayyy! I knew it 💞</h2>
+  <p class="love" id="love">For your love</p>
+  <div class="acts">
+    <button class="pill" id="share2">Share 💌</button>
+    <button class="pill ghost" id="again">Replay ↺</button>
+  </div>
+  <div class="make" id="make">
+    <input id="nm" maxlength="24" placeholder="Their name ✍️" autocomplete="off">
+    <button class="pill" id="mk">Make my link</button>
+  </div>
+</section>
+
+<div id="toast" class="toast"></div>
+<footer class="foot">Made by <a href="https://instagram.com/hack.n.code" target="_blank" rel="noopener">@hack.n.code</a></footer>
+<script src="script.js"></script>
+</body>
+</html>
