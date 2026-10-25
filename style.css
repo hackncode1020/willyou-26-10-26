@@ -1,0 +1,47 @@
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{height:100%;overflow:hidden}
+body{font-family:Poppins,system-ui,sans-serif;color:#fff;touch-action:manipulation;user-select:none;-webkit-user-select:none;
+ background:radial-gradient(120% 70% at 50% 0%,#5a0f33 0%,#2a0619 45%,#12020b 100%);}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;
+ background:radial-gradient(40% 30% at 15% 85%,rgba(255,60,120,.18),transparent 70%),radial-gradient(35% 25% at 90% 20%,rgba(255,120,170,.14),transparent 70%)}
+#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:5}
+.screen{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px 70px;text-align:center}
+.bear{width:min(42vw,170px);aspect-ratio:1;filter:drop-shadow(0 10px 24px rgba(255,40,100,.35));margin-bottom:10px}
+.bear svg{width:100%;height:100%;display:block}
+.bear.big{width:min(56vw,230px)}
+h1{font-size:clamp(28px,8.4vw,44px);font-weight:900;line-height:1.12;letter-spacing:-.5px;max-width:13ch;text-wrap:balance;
+ text-shadow:0 0 26px rgba(255,60,120,.65),0 4px 14px rgba(0,0,0,.5);overflow-wrap:anywhere}
+.sub{margin-top:8px;font-size:clamp(15px,4vw,19px);color:#ffc4d6;font-weight:500}
+.row{display:flex;gap:22px;margin-top:34px;align-items:center;justify-content:center;min-height:70px}
+.btn{font-family:inherit;border:0;cursor:pointer;border-radius:999px;font-weight:800;white-space:nowrap}
+.yes{position:relative;z-index:3;font-size:20px;padding:14px 30px;color:#fff;
+ background:linear-gradient(135deg,#ff5c8d,#ff1f5a 55%,#d4004a);
+ box-shadow:0 0 calc(18px + 40px*var(--g,0)) rgba(255,40,100,calc(.45 + .4*var(--g,0))),0 8px 22px rgba(0,0,0,.35),inset 0 2px 0 rgba(255,255,255,.35)}
+.no{z-index:4;font-size:18px;padding:12px 26px;color:#4a1028;background:#fff3f7;box-shadow:0 6px 18px rgba(0,0,0,.35)}
+.no.fled{position:fixed;left:0;top:0;transform-origin:center}
+.yay{opacity:0;pointer-events:none;z-index:6}
+.yay.on{pointer-events:auto}
+.yayt{font-size:clamp(30px,9vw,48px);font-weight:900;line-height:1.1;margin-top:14px;
+ text-shadow:0 0 28px rgba(255,60,120,.8),0 4px 14px rgba(0,0,0,.5)}
+.love{font-family:"Great Vibes",cursive;font-size:clamp(40px,12vw,64px);color:#ffd0dd;margin-top:4px;
+ text-shadow:0 0 22px rgba(255,90,140,.9)}
+.acts{display:flex;gap:12px;margin-top:22px}
+.pill{font-family:inherit;font-weight:700;font-size:15px;border:0;border-radius:999px;padding:11px 20px;cursor:pointer;color:#fff;
+ background:linear-gradient(135deg,#ff5c8d,#e0004d);box-shadow:0 6px 18px rgba(255,30,90,.35)}
+.pill.ghost{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25);box-shadow:none}
+.make{display:flex;gap:8px;margin-top:16px}
+.make input{font-family:inherit;font-size:15px;padding:10px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.25);
+ background:rgba(255,255,255,.08);color:#fff;width:150px;outline:none;user-select:text;-webkit-user-select:text}
+.make input::placeholder{color:#ffb9cc}
+.share{position:fixed;top:max(14px,env(safe-area-inset-top));right:14px;z-index:8;font-family:inherit;font-weight:700;font-size:14px;
+ color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 14px;cursor:pointer;backdrop-filter:blur(8px)}
+.foot{position:fixed;left:0;right:0;bottom:max(14px,env(safe-area-inset-bottom));text-align:center;font-size:13px;color:rgba(255,215,228,.8);z-index:8}
+.foot a{color:#ff9cbb;font-weight:700;text-decoration:none}
+.toast{position:fixed;left:50%;bottom:64px;transform:translateX(-50%) translateY(20px);opacity:0;z-index:9;background:#fff;color:#4a1028;
+ font-weight:700;font-size:14px;padding:10px 18px;border-radius:999px;transition:.3s;pointer-events:none}
+.toast.on{opacity:1;transform:translateX(-50%)}
+#finger{position:fixed;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(255,255,255,.5);border:3px solid #fff;
+ box-shadow:0 0 22px rgba(255,255,255,.75);z-index:20;opacity:0;pointer-events:none}
+#rip{position:fixed;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;border:4px solid #fff;z-index:20;opacity:0;pointer-events:none}
+body.cap .share{display:none}
+@media (min-width:700px){.screen{padding-bottom:80px}.yes{font-size:22px}.no{font-size:19px}}
