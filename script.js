@@ -46,9 +46,11 @@
     const cur = noAt(t), home = cur ? null : noHome();
     S.dodges++;
     const d = S.dodges;
-    const s1 = Math.max(.6, 1 - d * .1);
-    S.moves.push({ t, from: cur ? [cur.x, cur.y] : home, to, s0: cur ? cur.s : 1, s1,
-                   label: LABELS[Math.min(d, LABELS.length - 1)] });
+    const s1 = Math.max(.6, 1 - d * .1), label = LABELS[Math.min(d, LABELS.length - 1)];
+    const was = no.textContent; no.textContent = label;           // measure the new label so it never leaves the screen
+    const hw = no.offsetWidth * s1 / 2 + 10, hh = no.offsetHeight * s1 / 2 + 10; no.textContent = was;
+    to = [clamp(to[0], hw, innerWidth - hw), clamp(to[1], hh + 50, innerHeight - hh - 40)];
+    S.moves.push({ t, from: cur ? [cur.x, cur.y] : home, to, s0: cur ? cur.s : 1, s1, label });
     S.yesFrom = currentYesScale(t); S.yesTo = Math.min(2.4, 1 + d * .32); S.yesT = t;
   }
 
